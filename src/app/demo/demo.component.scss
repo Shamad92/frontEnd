@@ -1,0 +1,40 @@
+.etable{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+  }
+  .etable thead tr{
+    background: #e4f0f5;
+    min-height: 30px;
+    font-size: 18px;
+  }
+  .etable tr{
+    background: rgb(196, 221, 221);
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sort-by-asc
+{
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 0 3px;
+    background: transparent;
+    border-bottom: solid 7px rgb(92, 2, 2);
+    border-top-width: 0;
+}
+
+.sort-by-desc
+{
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 2px 4px 0 3px;
+    background: transparent;
+    border-bottom: solid 7px rgb(92, 2, 2);
+    border-bottom-width: 0;
+}

@@ -1,0 +1,19 @@
+<h3>Overview: Updated Table </h3>
+<table class="etable">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eobj of updatedEmployees;">
+      <th>{{eobj.id}}</th>
+      <td>{{eobj.name}}</td>
+      <td>{{eobj.email}}</td>
+      <td>{{eobj.location}}</td>
+    </tr>
+  </tbody>
+</table>

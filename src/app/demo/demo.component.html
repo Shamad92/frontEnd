@@ -1,0 +1,54 @@
+<div class="response" *ngIf="!respHidden">
+  {{updateResp.response}}
+</div>
+
+<input type="text" id="searchBox" placeholder="Search..." (keypress)="onKeyEventSearch($event)">
+<br>
+<table class="etable">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name<i (click)="clickForSort($event,'name')" class="sort-by-asc"></i></th>
+      <th>Email<i (click)="clickForSort($event,'email')" class="sort-by-asc"></i></th>
+      <th>Location<i (click)="clickForSort($event,'location')" class="sort-by-asc"></i></th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eobj of employees;">
+      <th>{{eobj.id}}</th>
+      <td>{{eobj.name}}</td>
+      <td>{{eobj.email}}</td>
+      <td>{{eobj.location}}</td>
+      <td><button (click)="enableUpdateDataModal(eobj)">Update</button>
+      <td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+
+<div id="update" *ngIf="!updateHidden">
+  <div>
+    <a href="#" (click)="getAllEmployeeData()">close</a>
+  </div>
+  <table class="etable">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>{{uodateObj.id}}</th>
+        <td><input type="text" id="updatedName" value={{uodateObj.name}}></td>
+        <td><input type="text" id="updatedEmail" value={{uodateObj.email}}></td>
+        <td><input type="text" id="updatedLocation" value={{uodateObj.location}}></td>
+        <td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="updateBtn" (click)="updateDataById(uodateObj.id)">Update</button>
+</div>

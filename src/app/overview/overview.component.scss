@@ -1,0 +1,14 @@
+.etable{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+.etable thead tr{
+  background: #05a4ee;
+  min-height: 30px;
+  font-size: 18px;
+}
+.etable tr{
+  background: rgb(196, 221, 221);
+  border-bottom: 1px solid #ccc;
+}
